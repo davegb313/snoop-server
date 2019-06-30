@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 4000;
+const cors = require('cors');
 
 app.use( express.static('build') );
 app.use( express.json());
+app.use(cors());
 
 let submissions = [];
 
